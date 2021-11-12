@@ -140,18 +140,19 @@ console.log('Topic 2 - .filter', lowPopulationAnimals(zooAnimals));
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(functioncb, d){
-   return functioncb + d;
+function add(consumecb, d){
+   return consumecb + d;
   }
 
-console.log('Callbacks - add', add(4, consume));
+console.log('Callbacks - add', add(consume(1, 2, cb), 4));
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
-function multiply(/*Your Code Here */){
-   /*Your Code Here */
+function multiply(consumecb, d){
+   return consumecb * d;
   }
 
+console.log('Callbacks - multiply', multiply(consume(1, 2, cb), 4));
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
