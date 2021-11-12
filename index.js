@@ -30,11 +30,21 @@ The variable internal is defined within the myFunction function. Since nestedFun
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
-  }
+function summation(number) {
+  const counter = [];
+  for (let i = 0; i <= number; i++){
+    if(number > 0){
+    counter.push([i]);
+  const reducedNumber = counter.reduce(function(acc, number){
+    return acc + number;
+    }, 1);
+    
+} 
+return reducedNumber * 1 ;
+}
+}
  
+console.log('Task 2', summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
