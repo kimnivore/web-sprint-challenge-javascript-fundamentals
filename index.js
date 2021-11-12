@@ -17,10 +17,10 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-/* This has to do with scope(where the functions/variable are available to us) and closure (the ability to reach out of scope to use variables in outer functions).
 
-The variable internal is defined within the myFunction function. Since nestedFunction is a child of myFunction, it has the ability to inherit information from its parent function. The function(nestedFunction) is an inner function who is able to reach out of its scope to grab the variable which is defined in the outer function(myFunction). */
+`This has to do with scope(where the functions/variable are available to us) and closure (the ability to reach out of scope to use variables in outer functions).
 
+The variable internal is defined within the myFunction function. Since nestedFunction is a child of myFunction, it has the ability to inherit information from its parent function. The function(nestedFunction) is an inner function who is able to reach out of its scope to grab the variable which is defined in the outer function(myFunction).`
 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
@@ -31,18 +31,16 @@ The variable internal is defined within the myFunction function. Since nestedFun
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(number) {
-  const counter = [];
-  for (let i = 0; i <= number; i++){
-    if(number > 0){
-    counter.push([i]);
-  const reducedNumber = counter.reduce(function(acc, number){
-    return acc + number;
-    }, 1);
-    return reducedNumber * 1 ;
-} 
-}
-}
- 
+  let counter = [];
+  for(let i = 0; i <= number; i++){
+      counter.push(i);
+  }
+  let sum = counter.reduce(function(acc, i){
+      return acc + i;
+  },0);
+  return sum;
+    }
+
 console.log('Topic 1 - Task 2', summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -74,6 +72,7 @@ const zooAnimals = [
     });
    return displayNames;
   }
+
   console.log('Topic 2 - .forEach', animalNames(zooAnimals));
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -88,6 +87,7 @@ const zooAnimals = [
     });
     return lowerCase;
   }
+
   console.log('Topic 2 - .map', lowerCaseNames(zooAnimals));
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -133,7 +133,6 @@ console.log('Topic 2 - .filter', lowPopulationAnimals(zooAnimals));
     function cb(a, b){
       return a + b;
     }
-  
  
   console.log('Callbacks - consume', consume(1, 2, cb));
 
@@ -152,15 +151,15 @@ function multiply(consumecb, d){
    return consumecb * d;
   }
 
-console.log('Callbacks - multiply', multiply(consume(1, 2, cb), 4));
+// console.log('Callbacks - multiply', multiply(consume(1, 2, cb), 4));
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
 function greeting(first, last){
    return `Hello ${first} ${last}, nice to meet you!`;
-    }
+  }
   
-    console.log('Greeting', greeting('kim', 'nguyen'));
+  // console.log('Greeting', greeting('kim', 'nguyen'));
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
@@ -180,7 +179,6 @@ function CuboidMaker (attributes) {
 }
 
 
-
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
@@ -189,8 +187,6 @@ CuboidMaker.prototype.volume = function(){
   return (this.length * this.width * this.height);
 }
 
-// const keane = new CuboidMaker(2, 2, 2);
-// console.log(keane.volume);
 
 /* 🐴🐴🐴 Step 3: Surface Area Method 🐴🐴🐴
   Create another method called surfaceArea using CuboidMaker's prototype that returns the surface area of a given cuboid's length, width, and height. 
@@ -202,7 +198,6 @@ CuboidMaker.prototype.surfaceArea = function(){
 }
 
 
-
 /* 🐴🐴🐴 Step 4: Create a new object that uses CuboidMaker 🐴🐴🐴
   Create an object called cuboid that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
@@ -212,7 +207,6 @@ const cuboid = new CuboidMaker ({
   width: 5,
   height: 5
 });
-
 
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴

@@ -26,13 +26,45 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+    `.map` is a method that is used for converting data and creates a brand new array. It requires a return statement and pushes this to the new array.
+
+    `.reduce` is a method that is usually used for multiplication/products and addition/sums (but can be used for anything). It returns a single value and takes two arguments (the accumulator(running total) and an item(current value)) and an initial value.
+
+    `.filter` is a method that filters data (based on true/false) and returns it into a new array. It requires a return statement and if true, it will be included in the new array. False statements will not be included in the new array.
+
+
 2. Explain the difference between a callback and a higher order function.
+
+    `Callback Function` is a function that is passed into another function as an argument.
+
+    `Higher Order Function` is a function that receives other functions as parameters.
+
 
 3. Explain what a closure is.
 
+    `Closure` is when an inner function reaches out of its scope to use a variable which is defined in the outer function.
+
+
 4. Describe the four principles of the 'this' keyword.
 
+    The four principles of `this` are: 
+
+    1. `Window binding`: if the other bindings are not applicable, 'this' defaults to the window, unless you are in strict mode, which returns undefined.
+
+    2. `Implicit binding`: this is the most common 'this' and applies to objects with methods. When the function is invoked, we look to the left of the dot and this is what 'this' refers to.
+
+    3. `Explicit binding`: we explicitly tell the function what 'this' refers to by using .call, .apply, or .bind.
+            .call - immediately invokes the function and we pass in our arguments one by one.
+            .apply - immediately invokes the function and pass in our arguments as an array.
+            .bind - returns a brand new function which can be invoked later; arguments are passed in one by one.
+
+    4. `New binding`: when a function is invoked as a constructor function with a new keyword, 'this' points to the newly created object.
+
+
 5. Why do we need super() in an extended class?
+
+    We need super() in the extended class because extend tells super what to 'super' to. Extend tells us where we came from and is used to create a class that is a child of another class. The 'super' keyword is used to access and call functions on an object's parent.
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
