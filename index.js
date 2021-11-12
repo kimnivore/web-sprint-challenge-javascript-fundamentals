@@ -156,10 +156,11 @@ console.log('Callbacks - multiply', multiply(consume(1, 2, cb), 4));
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
-function greeting(/*Your Code Here */){
-   return /*Your Code Here */
-  }
+function greeting(first, last){
+   return `Hello ${first} ${last}, nice to meet you!`;
+    }
   
+    console.log('Greeting', greeting('kim', 'nguyen'));
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
