@@ -38,13 +38,12 @@ function summation(number) {
   const reducedNumber = counter.reduce(function(acc, number){
     return acc + number;
     }, 1);
-    
+    return reducedNumber * 1 ;
 } 
-return reducedNumber * 1 ;
 }
 }
  
-console.log('Task 2', summation(4));
+console.log('Topic 1 - Task 2', summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -68,10 +67,14 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(array){
+    const displayNames = [];
+    array.forEach(function(array){
+      displayNames.push(`name: ${array.animal_name}, scientific: ${array.scientific_name}`);
+    })
+   return displayNames;
   }
-  
+  console.log('Topic 2 - .forEach', animalNames(zooAnimals));
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
