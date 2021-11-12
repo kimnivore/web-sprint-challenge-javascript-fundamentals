@@ -135,15 +135,16 @@ console.log('Topic 2 - .filter', lowPopulationAnimals(zooAnimals));
     }
   
  
-  console.log('Callbacks - 1', consume(1, 2, cb));
+  console.log('Callbacks - consume', consume(1, 2, cb));
 
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(/*Your Code Here */){
-    /*Your Code Here*/
+function add(functioncb, d){
+   return functioncb + d;
   }
 
+console.log('Callbacks - add', add(4, consume));
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
