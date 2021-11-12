@@ -17,7 +17,9 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
+/* This has to do with scope(where the functions/variable are available to us) and closure (the ability to reach out of scope to use variables in outer functions).
 
+The variable internal is defined within the myFunction function. Since nestedFunction is a child of myFunction, it has the ability to inherit information from its parent function. The function(nestedFunction) is an inner function who is able to reach out of its scope to grab the variable which is defined in the outer function(myFunction). */
 
 
 
